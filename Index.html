@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Employee Onboarding Portal</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: none;
+}
+
+label {
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #16a34a;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Employee Document Submission</h2>
+
+<form id="form">
+
+<!-- FULL NAME -->
+<label>Full Name (First, Last, Surname)</label>
+<input type="text" name="fullname" required>
+
+<!-- EMAIL -->
+<label>Email Address</label>
+<input type="email" name="email" required>
+
+<!-- PHONE -->
+<label>Phone Number</label>
+<input type="tel" name="phone" required>
+
+<!-- STATE -->
+<label>State of Origin</label>
+<input type="text" name="state" required>
+
+<!-- LEVEL OF EDUCATION -->
+<label>Level of Education</label>
+<select name="education" required>
+  <option value="">Select</option>
+  <option>Secondary School</option>
+  <option>ND</option>
+  <option>HND</option>
+  <option>BSc</option>
+  <option>MSc</option>
+</select>
+
+<!-- MARITAL STATUS -->
+<label>Marital Status</label>
+<select name="marital">
+  <option>Single</option>
+  <option>Married</option>
+  <option>Other</option>
+</select>
+
+<!-- BLOOD GROUP -->
+<label>Blood Group</label>
+<input type="text" name="blood">
+
+<!-- GENOTYPE -->
+<label>Genotype</label>
+<input type="text" name="genotype">
+
+<!-- DISABILITIES -->
+<label>Disabilities (if any)</label>
+<input type="text" name="disability">
+
+<!-- NIN -->
+<label>NIN</label>
+<input type="text" name="nin" required>
+
+<hr>
+
+<h3>Upload Documents</h3>
+
+<label>Birth Certificate</label>
+<input type="file" name="birth_cert" required>
+
+<label>WAEC Result</label>
+<input type="file" name="waec" required>
+
+<label>University Result</label>
+<input type="file" name="university" required>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<script>
+document.getElementById("form").addEventListener("submit", function(e){
+  e.preventDefault();
+  alert("Form submitted! (Next step: connect to backend)");
+});
+</script>
+
+</body>
+</html>
